@@ -4,7 +4,8 @@
   "description": "Serverless backend for the autosense frontend.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serverless offline start --skipCacheInvalidation"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/edipetres/autosense-backend/issues"
   },
-  "homepage": "https://github.com/edipetres/autosense-backend#readme"
+  "homepage": "https://github.com/edipetres/autosense-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1",
+    "serverless-http": "^2.3.0",
+    "serverless-offline": "^5.11.0",
+    "sls": "^0.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0"
+  }
 }
