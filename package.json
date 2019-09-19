@@ -1,0 +1,19 @@
+{
+  "name": "autosense-backend",
+  "version": "1.0.0",
+  "description": "Serverless backend for the autosense frontend.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edipetres/autosense-backend.git"
+  },
+  "author": "Eddie P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edipetres/autosense-backend/issues"
+  },
+  "homepage": "https://github.com/edipetres/autosense-backend#readme"
+}
