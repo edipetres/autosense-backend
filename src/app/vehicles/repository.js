@@ -16,3 +16,15 @@ exports.importVehicles = async (vehicles) => {
 
   return saveCount
 }
+
+exports.updateVehicle = async (id, newRegistrationNumber) => {
+  const updatedVehicle = await Vehicle.findByIdAndUpdate(id, {
+    $set: {
+      registration: newRegistrationNumber
+    }
+  }, {
+    new: true
+  })
+
+  return updatedVehicle
+}

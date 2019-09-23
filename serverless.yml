@@ -5,10 +5,6 @@ provider:
   runtime: nodejs8.10
   stage: dev
   region: eu-central-1
-  environment:
-    JWT_SECRET: 5nicwzq2mz4fue5bgjz5mjxnef5w
-    AWS_ACCESS_KEY_ID: 'AKIAIY5CIYFNPGDAMYQQ'
-    AWS_SECRET_ACCESS_KEY: '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'
 
 functions:
   app:
