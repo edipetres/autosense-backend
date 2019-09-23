@@ -1,5 +1,7 @@
 # Serverless Backend for the Autosense Exercise App
 
+[![CircleCI](https://circleci.com/gh/edipetres/autosense-backend.svg?style=svg)](https://circleci.com/gh/edipetres/autosense-backend)
+
 ## Deployment with CI/CD
 
 Our application is hosted on Github where each commit will trigger our Continuous Integartion pipeline. The CI pipeline builds the code, runs the tests and deployes to production when all the checks have passed. This way we ensure there is continous integartion and deployment of the latest version.
