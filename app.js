@@ -5,8 +5,11 @@ const sls = require('serverless-http')
 const app = express()
 const bodyParser = require('body-parser')
 const customResponses = require('./src/middlewares/customResponses')
+
 // load env vars in development mode
-require('dotenv').config()
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 
 app.use(bodyParser.json({limit: '50mb'}))
 app.use(customResponses)

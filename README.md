@@ -2,17 +2,33 @@
 
 [![CircleCI](https://circleci.com/gh/edipetres/autosense-backend.svg?style=svg)](https://circleci.com/gh/edipetres/autosense-backend)
 
+## Rest API
+
+Find the documentation [here](docs/rest-api.md).
+
 ## Deployment with CI/CD
 
 Our application is hosted on Github where each commit will trigger our Continuous Integartion pipeline. The CI pipeline builds the code, runs the tests and deployes to production when all the checks have passed. This way we ensure there is continous integartion and deployment of the latest version.
+
+## Hosting
+
+We use the *Serverless* framework to abstract away the deployment to our prefered Cloud Service Provider. In our case we use AWS Lambda. CircleCI is given access to automatically deploy new versions of the application to our Lambda service environment.
+
+## Monitoring
+
+The application continuously pushes logs to Amazon CloudWatch that can be used for live monitoring. For more advanced monitoring capabilites we can use Dashbird.io that integrates with AWS to show us advanced insights of the system.
 
 ## Database
 
 A managed MongoDB instance is running on MongoDB Atlas. I used a free sandbox version that offers 500 MB of storage for free. It was populated with the given JSON data by running the following command: `node src/app/helpers/import.js`
 
+The data model for the **vehicle** entity is defined [here](src/app/vehicles/model.js)
+
+![](docs/database-snapshot.png)
+
 ## Architecture
 
-The object entities (such as `vehicle`) are grouped into their own folders in `src/app`. There, you can see four different handlers: `controller, model, repository and router`. 
+The object entities (such as `vehicle`) are grouped into their own folders in `src/app`. There, you can see four different handlers for each entity: `controller, model, repository and router`. 
 
 **Model** is responsible for defining the entity (object) model and it also servers as the mongoose schema for validating fields of the object (for example before inserting data into the database). 
 
