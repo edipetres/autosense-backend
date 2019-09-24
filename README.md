@@ -23,7 +23,7 @@ npm install
 touch .env
 ```
 
-- Add the Mongo connection string under `MONGO_URL` in your `.env` file
+- Add the Mongo connection string under `MONGO_URL` in your `.env` file. This is intentionally not included in the project. That is, in a real world scenario we would not expose our database credentials.
 
 - Run tests 
 ```bash
@@ -38,7 +38,7 @@ npm test
 $ npm start
 ```
 
-- Send a HTTP request to `:3000/vehicles`
+- Send a HTTP `GET` request to `localhost:3000/vehicles`
 
 ## Rest API
 
@@ -64,9 +64,9 @@ The application continuously pushes logs to Amazon CloudWatch that can be used f
 
 ## Database
 
-A managed MongoDB instance is running on MongoDB Atlas. I used a free sandbox version that offers 500 MB of storage for free. It was populated with the given JSON data by running the following command: `node src/app/helpers/import.js`
+We use a managed NoSQL Mongo database running on MongoDB Atlas. It is a free sandbox version that offers 500 MB of storage for free. It was populated with the given JSON data by running the following command: `node src/app/helpers/import.js`
 
-The data model for the **vehicle** entity is defined [here](src/app/vehicles/model.js)
+The data model for the **vehicle** entity is defined in [src/app/vehicles/model.js](src/app/vehicles/model.js)
 
 ![](docs/database-snapshot.png)
 
