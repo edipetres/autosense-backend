@@ -47,6 +47,9 @@ The REST API is currently deployed to
 
 Find the documentation [here](docs/rest-api.md).
 
+## Architecture diagram of the Systems
+![System architecture](docs/system-architecture.png)
+
 ## Deployment with CI/CD
 
 Our application is hosted on Github where each commit will trigger our Continuous Integartion pipeline. The CI pipeline builds the code, runs the tests and deployes to production when all the checks have passed. This way we ensure there is continous integartion and deployment of the latest version.
