@@ -4,7 +4,7 @@
   "description": "Serverless backend for the autosense frontend.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "concurrently 'npm start' 'sleep 10 && NODE_ENV=test mocha --opts mocha.opts'",
     "start": "serverless offline start --skipCacheInvalidation"
   },
   "repository": {
@@ -27,6 +27,10 @@
     "sls": "^0.1.0"
   },
   "devDependencies": {
-    "dotenv": "^8.1.0"
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.2",
+    "dotenv": "^8.1.0",
+    "serverless-mocha-plugin": "^1.11.0",
+    "supertest": "^4.0.2"
   }
 }

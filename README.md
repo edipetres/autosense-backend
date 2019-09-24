@@ -2,7 +2,48 @@
 
 [![CircleCI](https://circleci.com/gh/edipetres/autosense-backend.svg?style=svg)](https://circleci.com/gh/edipetres/autosense-backend)
 
+## Setup
+
+- Install Node 8.10 (latest runtime supported by AWS Lambda)
+
+- Install serverless
+
+```bash
+npm i -g serverless
+```
+
+- Install node modules 
+
+```
+npm install
+```
+
+- Initialize env variables 
+```
+touch .env
+```
+
+- Add the Mongo connection string under `MONGO_URL` in your `.env` file
+
+- Run tests 
+```bash
+npm test
+```
+
+## Running locally
+
+- Start serverless offline
+
+```sh
+$ npm start
+```
+
+- Send a HTTP request to `:3000/vehicles`
+
 ## Rest API
+
+The REST API is currently deployed to
+`https://76puffjpb8.execute-api.eu-central-1.amazonaws.com/dev`
 
 Find the documentation [here](docs/rest-api.md).
 

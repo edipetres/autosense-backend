@@ -40,3 +40,4 @@ functions:
 
 plugins:
   - serverless-offline
+  - serverless-mocha-plugin
